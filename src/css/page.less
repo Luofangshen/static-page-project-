@@ -49,7 +49,7 @@ html{
     }
   }
   .page-content {
-    padding: 38px 35px 0 35px;
+    padding: 20px 35px 0 35px;
     .page-content-search {
       .fix();
       .page-content-search-top {
@@ -98,7 +98,7 @@ html{
             left: 0;
             width: 88px;
             height: 30px;
-            z-index: 10;
+            z-index: 100;
             background-color: white;
             span:nth-of-type(1) {
               position: relative;
@@ -120,12 +120,13 @@ html{
           .myphone-content{
             display: none;
             position: absolute;
+            z-index: 20;
             border: 1px solid #DDDDDD;
             top: 35px;
             width: 220px;
             height: 300px;
             box-shadow: 0 0 5px rgba(0, 0, 0, .3);
-            background: url("../images/app_jd_1.png") no-repeat 1px 25px;
+            background: white url("../images/app_jd_1.png") no-repeat 1px 25px;
             .myphone-content-top{
               text-align: right;
               position: absolute;
@@ -225,12 +226,14 @@ html{
           }
           .client-serve-content{
             display: none;
-            width: 63px;
+            width: 64px;
             border: 1px solid #DDDDDD;
             border-top: none;
             position: absolute;
+            z-index: 10;
             left: -1px;
-            top: 20px;
+            top: 30px;
+            background: white;
             ul{
               list-style: none;
               li{
@@ -284,9 +287,11 @@ html{
             height: 300px;
             left: -204px;
             top: 30px;
+            z-index: 10;
             padding: 10px;
             border: 1px solid #DDDDDD;
             box-shadow: 0 0 10px 0 #DDDDDD;
+            background: white;
             .first{
               padding-bottom: 20px;
               border-bottom: 1px solid #DDDDDD;
@@ -344,7 +349,8 @@ html{
         }
       }
       .page-content-search-main{
-        padding-top: 45px;
+        position: relative;
+        top: 45px;
         .logo{
           display: inline-block;
           width: 270px;
@@ -352,20 +358,200 @@ html{
           background: url("../images/logo-201305.png") no-repeat;
         }
         .search{
-          display: inline-block;
+          position: absolute;
+          left: 324px;
+          top: 7px;
+          .search-main{
+            background-color: #E3393C;
+            width: 490px;
+            height: 40px;
+            input{
+              position: relative;
+              top: -10px;
+              left: 2px;
+              width: 404px;
+              height: 36px;
+              padding: 5px;
+              box-sizing: border-box;
+              font: 12px '微软雅黑';
+              color: rgba(0,0,0,.5);
+            }
+            .search-btn{
+              display: inline-block;
+              width: 78px;
+              height: 36px;
+              background-image: url("../images/search.jpg");
+            }
+          }
+          .search-content{
+            margin-top: 6px;
+            color: #999999;
+            font: 12px '微软雅黑';
+            a{
+              margin-right: 10px;
+              color: #999999;
+              font: 12px '微软雅黑';
+              text-decoration: none;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
         }
-        .my{
-          display: inline-block;
-          width: 106px;
-          height: 32px;
-          background: lightblue url("../images/jd.jpg");
-
+        .mywrap{
+          position: absolute;
+          right: 161px;
+          top: 20px;
+          &:hover{
+            .my{
+              background-color: white;
+              background-position: -118px -53px;
+            }
+            .my-content{
+              display: block;
+            }
+          }
+          .my{
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            width: 115px;
+            height: 32px;
+            border: 1px solid #EFEFEF;
+            border-bottom: none;
+            background: #F7F7F7 url("../images/iconlist_2.png") -118px -23px no-repeat;
+            box-sizing: border-box;
+            padding: 10px 0 0 38px;
+            font-size: 13px;
+            span{
+              border: 5px solid;
+              border-color: #CCC transparent transparent transparent;
+              position: relative;
+              top: 11px;
+            }
+          }
+          .my-content{
+            display: none;
+            position: absolute;
+            top: 31px;
+            left: -177px;
+            width: 290px;
+            height: 190px;
+            background-color: white;
+            border: 1px solid #DDDDDD;
+            .my-content-header{
+              box-sizing: border-box;
+              padding: 15px;
+              font-size: 12px;
+              border-bottom: 1px solid #DDDDDD;
+            }
+            .my-content-left{
+              display: inline-block;
+              border-right: 1px solid #DDDDDD;
+              ul{
+                list-style: none;
+                padding:0 7px 0 7px;
+                li{
+                  padding: 8px 60px 8px 10px;
+                  font-size: 12px;
+                  a{
+                    text-decoration: none;
+                    color: cornflowerblue;
+                  }
+                  &:hover{
+                    background-color: #DDDDDD;
+                    a{
+                      color: red;
+                    }
+                  }
+                }
+              }
+            }
+            .my-content-right{
+              display: inline-block;
+              position: relative;
+              top: -45px;
+              ul{
+                list-style: none;
+                padding:0 7px 0 7px;
+                li{
+                  padding: 5px;
+                  padding-right: 60px;
+                  font-size: 12px;
+                  a{
+                    text-decoration: none;
+                    color: cornflowerblue;
+                  }
+                  &:hover{
+                    background-color: #DDDDDD;
+                    a{
+                      color: red;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
-        .car{
-          display: inline-block;
-          width: 126px;
-          height: 44px;
-          background: lightblue url("../images/gwc.jpg");
+        .carwrap{
+          position: absolute;
+          right: -4px;
+          top: 20px;
+          &:hover{
+            .car{
+              background-color: white;
+              background-position: -114px -112px;
+            }
+            .car-content{
+              display: block;
+            }
+          }
+          .car{
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            z-index: 9;
+            width: 150px;
+            height: 32px;
+            border: 1px solid #EFEFEF;
+            border-bottom: none;
+            background: #F7F7F7 url("../images/iconlist_2.png") -114px -81px no-repeat;
+            box-sizing: border-box;
+            padding: 10px 0 0 38px;
+            font-size: 13px;
+            span{
+              border: 5px solid;
+              border-color: #CCC transparent transparent transparent;
+              position: relative;
+              top: 11px;
+              left: 5px;
+            }
+          }
+          .car-content{
+            display: none;
+            width: 420px;
+            height: 60px;
+            position: absolute;
+            left: -272px;
+            top: 31px;
+            border: 1px solid #DDDDDD;
+            background-color: white;
+            z-index: 3;
+            .car-logo{
+              display: inline-block;
+              margin-left: 30px;
+              width: 64px;
+              height: 60px;
+              background: url("../images/iconlist_2.png") no-repeat 7px 6px;
+            }
+            span{
+              position: relative;
+              color: #999;
+              font: 12px '微软雅黑';
+              left: 18px;
+              top: -23px;
+            }
+          }
         }
       }
     }
